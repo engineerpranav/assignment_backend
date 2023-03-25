@@ -15,18 +15,14 @@ const taskSchema=new mongoose.Schema({
         type:mongoose.Schema.Types.ObjectId,
         ref:"user"
     },
-    "sprint":{
-        type:String,
-        required:[true,"please select sprint"]
-    },
     "status":{
         type:String,
         required:[true,"please select task status"]
+    },
+    "type":{
+        type:String,
+        required:[true,"please select task type"]
     }
-    // "type":{
-    //     type:String,
-    //     required:[true,"please select task type"]
-    // }
 })
 
 

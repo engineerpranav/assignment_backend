@@ -1,14 +1,11 @@
 const { Task } = require("../models/tasks");
 const { User } = require("../models/user");
 
- 
-
-
 
 const getTaskofuser = async (req, res, next) => {
 
     try {
-        console.log(1);
+       
         const user = await User.findById(req.user._id);
 
         if (!user) {
@@ -48,7 +45,10 @@ const create_task = async (req, res, next) => {
             "assignee": req.params.id,
             "owner": req.user._id,
             "sprint": req.body.sprint,
-            "status": req.body.status
+            "status": req.body.status,
+            "type": req.body.type
+
+
         }
 
         const task = await Task.create(obj);

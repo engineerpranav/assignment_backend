@@ -22,7 +22,7 @@ app.use("/api",taskrouter);
 
 const PORT=3001;
 
-ConnectDataBase.then(()=>{
+ConnectDataBase().then(()=>{
 
     app.listen(PORT,()=>{
 

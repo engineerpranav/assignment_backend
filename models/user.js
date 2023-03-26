@@ -3,19 +3,19 @@ const mongoose=require("mongoose");
 
 const userSchema=new mongoose.Schema({
 
-    "name":{
+    name:{
         type:String,
         required:[true,"Please Enter your name"]
     },
-    "email":{
+    email:{
         type:String,
         required:[true,"Please enter your email"]
     },
-    "password":{
+    password:{
         type:String,
         required:[true,"please enter your password"]
     },
-    "tasks":[{
+    tasks:[{
         "title":String,
         "assignee":String,
         "owner":String,
@@ -24,8 +24,6 @@ const userSchema=new mongoose.Schema({
         "type":String
         
     }]
-
-
 
 })
 

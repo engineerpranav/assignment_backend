@@ -48,7 +48,6 @@ const create_task = async (req, res, next) => {
             "status": req.body.status,
             "type": req.body.type
 
-
         }
 
         const task = await Task.create(obj);

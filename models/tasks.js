@@ -22,7 +22,12 @@ const taskSchema=new mongoose.Schema({
     "type":{
         type:String,
         required:[true,"please select task type"]
-    }
+    },
+    "sprint":{
+        type:String,
+        required:[true,"please select sprint type"]
+    },
+
 })
 
 
